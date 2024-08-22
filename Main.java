@@ -2,7 +2,6 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         Song[] songs = new Song[3];
-        System.out.println(songs[0].getName());
     }
 
     // private static String[] createAlbum() {
@@ -18,8 +17,8 @@ public class Main {
     // }
     // }
 
-    private static void printAlbum() {
+    // private static void printAlbum() {
 
-    }
+    // }
 
 }
