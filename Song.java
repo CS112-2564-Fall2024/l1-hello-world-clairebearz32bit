@@ -44,6 +44,10 @@ public class Song {
         return this.songLength;
     }
 
+    public boolean equals(Song song) {
+        return getName().equals(song.name) && getArtist().equals(song.artist) && getSongLength() == song.songLength;
+    }
+
     @Override
     public String toString() {
 
