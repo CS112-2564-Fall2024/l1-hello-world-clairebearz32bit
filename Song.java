@@ -1,19 +1,18 @@
 
 public class Song {
     private String name;
-    private String albumName;
     private String artist;
-    private double songLength;
+    private int songLength;
 
 
     public Song() {
         setName("Blank");
         setArtist("Unknown");
-        setSongLength(0.0);
+        setSongLength(0);
     }
 
 
-    public Song(String name, String artist, double songLength) {
+    public Song(String name, String artist, int songLength) {
         setName(name);
         setArtist(artist);
         setSongLength(songLength);
@@ -29,7 +28,7 @@ public class Song {
     }
 
 
-    public void setSongLength(double songLength) {
+    public void setSongLength(int songLength) {
         this.songLength = songLength;
     }
 
@@ -41,9 +40,14 @@ public class Song {
         return this.artist;
     }
 
-    public double getSongLength() {
+    public int getSongLength() {
         return this.songLength;
     }
 
+    @Override
+    public String toString() {
 
+        return String.format("Song Name: %s\nArtist: %s\nLength: %d:%02d\n", getName(), getArtist(),
+                getSongLength() / 60, getSongLength() % 60);
+    }
 }
